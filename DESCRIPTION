@@ -1,0 +1,19 @@
+Package: probitUM
+Type: Package
+Title: Bayesian Probit Unfolding Models for Binary Preference Data
+Version: 0.1.0
+Author: Skylar Shi
+Maintainer: Skylar Shi <dshi98@uw.edu>
+Description: This package provides tools for the Bayesian implementation 
+    and analysis of probit unfolding models, specifically designed for binary preference data analysis.
+Imports:
+    Rcpp, RcppArmadillo, RcppDist, mvtnorm, RcppTN, MASS, RColorBrewer,
+    dplyr, ggplot2, ggrepel, magrittr, truncnorm
+LinkingTo: 
+    Rcpp, RcppArmadillo, RcppDist, mvtnorm, RcppTN
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.1
+Depends: 
+    R (>= 2.10)

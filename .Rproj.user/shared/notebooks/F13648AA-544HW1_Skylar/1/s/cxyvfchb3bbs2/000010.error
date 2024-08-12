@@ -1,0 +1,1 @@
+{"frames":[{"func":"mvrnorm(1000, beta_hat, solve(t(X) %*% X) %*% sigma2)","file":"","line_number":0,"end_line_number":0,"character_number":0,"end_character_number":0}],"message":"Error in solve(t(X) %*% X) %*% sigma2 : 非整合参数\n"}

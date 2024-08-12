@@ -1,0 +1,6 @@
+"0","binomial.conf.interval = function (y, n){"
+"0","  p_hat = y/n"
+"0","  c_left = p_hat-1.645*sqrt(p_hat*(1-p_hat)/n)"
+"0","  c_right = p_hat+1.645*sqrt(p_hat*(1-p_hat)/n)"
+"0","  return(c(c_left, c_right))"
+"0","}"

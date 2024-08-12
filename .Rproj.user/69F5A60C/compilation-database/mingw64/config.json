@@ -1,0 +1,28 @@
+{
+    "args": [
+        "-std=gnu++17",
+        "-IC:/PROGRA~1/R/R-43~1.3/include",
+        "-DNDEBUG",
+        "-IC:/Users/时丹阳/AppData/Local/R/win-library/4.3/Rcpp/include",
+        "-IC:/Users/时丹阳/AppData/Local/R/win-library/4.3/RcppArmadillo/include",
+        "-IC:/Users/时丹阳/AppData/Local/R/win-library/4.3/RcppDist/include",
+        "-IC:/Users/时丹阳/AppData/Local/R/win-library/4.3/mvtnorm/include",
+        "-IC:/Users/时丹阳/AppData/Local/R/win-library/4.3/RcppTN/include",
+        "-DEIGEN_DONT_VECTORIZE",
+        "-nostdinc",
+        "-Ic:/rtools43/x86_64~1.pos/bin/../lib/gcc/x86_64-w64-mingw32.static.posix/12.3.0/include/c++",
+        "-Ic:/rtools43/x86_64~1.pos/bin/../lib/gcc/x86_64-w64-mingw32.static.posix/12.3.0/include/c++/x86_64-w64-mingw32.static.posix",
+        "-Ic:/rtools43/x86_64~1.pos/bin/../lib/gcc/x86_64-w64-mingw32.static.posix/12.3.0/include/c++/backward",
+        "-Ic:/rtools43/x86_64~1.pos/bin/../lib/gcc/x86_64-w64-mingw32.static.posix/12.3.0/include",
+        "-Ic:/rtools43/x86_64~1.pos/bin/../lib/gcc/x86_64-w64-mingw32.static.posix/12.3.0/../../../../include",
+        "-Ic:/rtools43/x86_64~1.pos/bin/../lib/gcc/x86_64-w64-mingw32.static.posix/12.3.0/include-fixed",
+        "-include",
+        "E:/OneDrive/UW_Seattle/paper/Abel/probitUM/.Rproj.user/69F5A60C/compilation-database/mingw64/cpp-definitions.h"
+    ],
+    "pch": "RcppArmadillo",
+    "is_cpp": true,
+    "hash": "17234488931712136464",
+    "compiler": "14344192058900600965",
+    "rversion": "4.3.3",
+    "dbversion": 4
+}
