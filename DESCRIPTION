@@ -7,8 +7,8 @@ Maintainer: Skylar Shi <dshi98@uw.edu>
 Description: This package provides tools for the Bayesian implementation 
     and analysis of probit unfolding models, specifically designed for binary preference data analysis.
 Imports:
-    Rcpp, RcppArmadillo, RcppDist, mvtnorm, RcppTN, MASS, RColorBrewer,
-    dplyr, ggplot2, ggrepel, magrittr, truncnorm
+    Rcpp, RcppArmadillo, RcppDist, mvtnorm, RcppTN, MASS, RColorBrewer, dplyr, ggplot2, 
+    ggrepel, magrittr, truncnorm
 LinkingTo: 
     Rcpp, RcppArmadillo, RcppDist, mvtnorm, RcppTN
 License: GPL-3

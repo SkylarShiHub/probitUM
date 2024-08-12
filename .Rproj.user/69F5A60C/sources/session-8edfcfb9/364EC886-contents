@@ -32,8 +32,8 @@
 #' - `delta1`: A matrix of parameter draws of delta1.
 #' - `delta2`: A matrix of parameter draws of delta2.
 #' @examples
-#' hyperparams = list(leg_mean = 0, leg_s = 1, alpha_mean = c(0, 0), alpha_cov = 25,
-#'                    delta_mean = c(-2, 10), delta_cov = 10)
+#' hyperparams = list(beta_mean = 0, beta_var = 1, alpha_mean = c(0, 0),
+#'                    alpha_var = 25, delta_mean = c(-2, 10), delta_var = 10)
 #' post_samples = sample_three_utility_probit(house_votes_m, hyperparams,
 #'           num_iter = 400, start_iter = 200,
 #'           keep_iter = 1, leg_pos_init = NULL, alpha_pos_init = NULL,
@@ -59,9 +59,9 @@ sample_three_utility_probit <- function(
   draw_info <- sample_three_utility_probit_rcpp(
     vote_m, init_info[[1]], init_info[[2]], init_info[[3]], init_info[[4]],
     init_info[[5]], init_info[[6]], init_info[[7]],
-    init_info[[8]], init_info[[9]], hyperparams$leg_mean, hyperparams$leg_s,
-    hyperparams$alpha_mean, diag(2) * hyperparams$alpha_cov,
-    hyperparams$delta_mean, diag(2) * hyperparams$delta_cov,
+    init_info[[8]], init_info[[9]], hyperparams$beta_mean, sqrt(hyperparams$beta_var),
+    hyperparams$alpha_mean, diag(2) * hyperparams$alpha_var,
+    hyperparams$delta_mean, diag(2) * hyperparams$delta_var,
     num_iter, start_iter, keep_iter, pos_ind - 1, neg_ind - 1, sample_beta)
 
   all_param_draw = draw_info[[1]]

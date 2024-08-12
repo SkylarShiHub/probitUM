@@ -4,7 +4,7 @@
 #' @param col_blue A character string indicating whether the "D" party should be colored blue or "R".
 #' @importFrom ggplot2 ggplot geom_point scale_color_manual scale_shape_manual labs theme_minimal theme element_text element_blank aes
 #' @importFrom ggrepel geom_text_repel
-#' @importFrom dplyr arrange desc top_n slice dense_rank
+#' @importFrom dplyr arrange desc top_n slice dense_rank n
 #' @importFrom magrittr %>%
 #' @importFrom RColorBrewer brewer.pal
 #' @importFrom graphics par

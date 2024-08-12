@@ -16,8 +16,8 @@
 #' - `probability`: A matrix of probabilities of voting "Yes"
 #' - `histogram`: A histogram of the density of probabilities.
 #' @examples
-#' hyperparams = list(leg_mean = 0, leg_s = 1, alpha_mean = c(0, 0), alpha_cov = 25,
-#'                    delta_mean = c(-2, 10), delta_cov = 10)
+#' hyperparams = list(beta_mean = 0, beta_var = 1, alpha_mean = c(0, 0),
+#'                    alpha_var = 25, delta_mean = c(-2, 10), delta_var = 10)
 #' tune_results = tune_hyper(hyperparams, n_member = 100, n_issue = 100)
 #' @export
 tune_hyper <- function(hyperparams = hyperparams, n_member, n_issue) {

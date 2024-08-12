@@ -657,24 +657,24 @@ List sample_three_utility_probit_rcpp(
           double L_orig = 0.0;
           double L_new = 0.0;
 
-          if (j == 1 && i < 50) {
-          Rcout << "iter = " << i+1 << endl;
-          Rcout << "j = " << j << endl;
-          Rcout << "current_alpha_1: " << current_param_val_v(alpha_v_1_start_ind + j) << endl;
-          Rcout << "alpha_v_1_new: " << -current_param_val_v(alpha_v_1_start_ind + j) << endl;
-          Rcout << "current_alpha_2: " << current_param_val_v(alpha_v_2_start_ind + j) << endl;
-          Rcout << "alpha_v_2_new: " << -current_param_val_v(alpha_v_2_start_ind + j) << endl;
-          Rcout << "current_delta_1: " << current_param_val_v(delta_v_1_start_ind + j) << endl;
-          Rcout << "delta_v_1_new: " << -current_param_val_v(delta_v_1_start_ind + j) << endl;
-          Rcout << "current_delta_2: " << current_param_val_v(delta_v_2_start_ind + j) << endl;
-          Rcout << "delta_v_2_new: " << -current_param_val_v(delta_v_2_start_ind + j) << endl;
-          }
+          // if (j == 1 && i < 50) {
+          // Rcout << "iter = " << i+1 << endl;
+          // Rcout << "j = " << j << endl;
+          // Rcout << "current_alpha_1: " << current_param_val_v(alpha_v_1_start_ind + j) << endl;
+          // Rcout << "alpha_v_1_new: " << -current_param_val_v(alpha_v_1_start_ind + j) << endl;
+          // Rcout << "current_alpha_2: " << current_param_val_v(alpha_v_2_start_ind + j) << endl;
+          // Rcout << "alpha_v_2_new: " << -current_param_val_v(alpha_v_2_start_ind + j) << endl;
+          // Rcout << "current_delta_1: " << current_param_val_v(delta_v_1_start_ind + j) << endl;
+          // Rcout << "delta_v_1_new: " << -current_param_val_v(delta_v_1_start_ind + j) << endl;
+          // Rcout << "current_delta_2: " << current_param_val_v(delta_v_2_start_ind + j) << endl;
+          // Rcout << "delta_v_2_new: " << -current_param_val_v(delta_v_2_start_ind + j) << endl;
+          // }
 
           for (int k = 0; k < vote_m.n_rows; k++) {
             if (!isVoteValid(vote_m(k, j))) continue;  // Skip NA votes
-            if (j == 1 && i == 49) {
-              Rcout << "vote_m(" << k << ", " << j << "): " << vote_m(k, j) << endl;
-            }
+            // if (j == 1 && i == 49) {
+            //   Rcout << "vote_m(" << k << ", " << j << "): " << vote_m(k, j) << endl;
+            // }
             arma::vec param_now = {current_param_val_v(leg_start_ind + k),
                          current_param_val_v(alpha_v_1_start_ind + j),
                          current_param_val_v(alpha_v_2_start_ind + j),
@@ -695,9 +695,9 @@ List sample_three_utility_probit_rcpp(
           // L_0(i,j) = L_orig;
           // L_1(i,j) = L_new;
           double flip_prob = min(1.0, exp(L_new - L_orig));
-          if (j == 1 && i < 50){
-            Rcout << "flip_prob: " << flip_prob << endl;
-          }
+          // if (j == 1 && i < 50){
+          //   Rcout << "flip_prob: " << flip_prob << endl;
+          // }
           if (randu() < flip_prob){
               current_param_val_v(alpha_v_1_start_ind + j) = -current_param_val_v(alpha_v_1_start_ind + j);
               current_param_val_v(alpha_v_2_start_ind + j) = -current_param_val_v(alpha_v_2_start_ind + j);
@@ -729,27 +729,27 @@ List sample_three_utility_probit_rcpp(
             delta_v_2_new = rnorm(1, delta_mean_v[1], sqrt(delta_cov_s(0,0)))[0];
             // delta_v_new = rmvnorm(1, mu_0, sigma_delta).row(0);
           }
-          if (j == 1 && i < 50) {
-            Rcout << "iter = " << i+1 << endl;
-            Rcout << "j = " << j << endl;
-            Rcout << "current_alpha_1: " << current_param_val_v(alpha_v_1_start_ind + j) << endl;
-            Rcout << "alpha_v_1_new: " << alpha_v_1_new << endl;
-            Rcout << "current_alpha_2: " << current_param_val_v(alpha_v_2_start_ind + j) << endl;
-            Rcout << "alpha_v_2_new: " << alpha_v_2_new << endl;
-            Rcout << "current_delta_1: " << current_param_val_v(delta_v_1_start_ind + j) << endl;
-            Rcout << "delta_v_1_new: " << delta_v_1_new << endl;
-            Rcout << "current_delta_2: " << current_param_val_v(delta_v_2_start_ind + j) << endl;
-            Rcout << "delta_v_2_new: " << delta_v_2_new << endl;
+          // if (j == 1 && i < 50) {
+          //   Rcout << "iter = " << i+1 << endl;
+          //   Rcout << "j = " << j << endl;
+          //   Rcout << "current_alpha_1: " << current_param_val_v(alpha_v_1_start_ind + j) << endl;
+          //   Rcout << "alpha_v_1_new: " << alpha_v_1_new << endl;
+          //   Rcout << "current_alpha_2: " << current_param_val_v(alpha_v_2_start_ind + j) << endl;
+          //   Rcout << "alpha_v_2_new: " << alpha_v_2_new << endl;
+          //   Rcout << "current_delta_1: " << current_param_val_v(delta_v_1_start_ind + j) << endl;
+          //   Rcout << "delta_v_1_new: " << delta_v_1_new << endl;
+          //   Rcout << "current_delta_2: " << current_param_val_v(delta_v_2_start_ind + j) << endl;
+          //   Rcout << "delta_v_2_new: " << delta_v_2_new << endl;
 
-          }
+          // }
 
           
 
           for (int k = 0; k < vote_m.n_rows; k++) {
             if (!isVoteValid(vote_m(k, j))) continue; // Skip NA votes
-            if (j == 1 && i == 49) {
-              Rcout << "vote_m(" << k << ", " << j << "): " << vote_m(k, j) << endl;
-            }
+            // if (j == 1 && i == 49) {
+            //   Rcout << "vote_m(" << k << ", " << j << "): " << vote_m(k, j) << endl;
+            // }
 
             // Rcout << "vote_m(" << k << ", " << j << "): " << vote_m(k, j) << endl;
             arma::vec param_now = {current_param_val_v(leg_start_ind + k),
@@ -772,9 +772,9 @@ List sample_three_utility_probit_rcpp(
           // L_0(i,j) = L_orig;
           // L_1(i,j) = L_new;
           double flip_prob = min(1.0, exp(L_new - L_orig));
-          if (j == 1 && i < 50){
-            Rcout << "flip_prob: " << flip_prob << endl;
-          }
+          // if (j == 1 && i < 50){
+          //   Rcout << "flip_prob: " << flip_prob << endl;
+          // }
           
           if (randu() < flip_prob){
               current_param_val_v(alpha_v_1_start_ind + j) = alpha_v_1_new;

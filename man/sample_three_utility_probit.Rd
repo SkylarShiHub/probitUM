@@ -71,8 +71,8 @@ A list mainly containing:
 This function is used to get samples of all the parameters from their posterior distributions
 }
 \examples{
-hyperparams = list(leg_mean = 0, leg_s = 1, alpha_mean = c(0, 0), alpha_cov = 25,
-                   delta_mean = c(-2, 10), delta_cov = 10)
+hyperparams = list(beta_mean = 0, beta_var = 1, alpha_mean = c(0, 0),
+                   alpha_var = 25, delta_mean = c(-2, 10), delta_var = 10)
 post_samples = sample_three_utility_probit(house_votes_m, hyperparams,
           num_iter = 400, start_iter = 200,
           keep_iter = 1, leg_pos_init = NULL, alpha_pos_init = NULL,

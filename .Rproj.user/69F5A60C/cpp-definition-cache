@@ -1,6 +1,6 @@
 [
     {
-        "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/rtn1.cpp",
+        "file": "E:/OneDrive/UW_Seattle/paper/Abel/probitUM/src/rtn1.cpp",
         "file_last_write": 1709704165.0,
         "definitions": [
             {
@@ -8,7 +8,7 @@
                 "kind": 6,
                 "parent_name": "",
                 "name": "CheckSimple(const double, const double)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/rtn1.cpp",
+                "file": "E:/OneDrive/UW_Seattle/paper/Abel/probitUM/src/rtn1.cpp",
                 "line": 11,
                 "column": 13,
                 "hidden": false
@@ -18,7 +18,7 @@
                 "kind": 6,
                 "parent_name": "",
                 "name": "UseAlg1(const double, const double)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/rtn1.cpp",
+                "file": "E:/OneDrive/UW_Seattle/paper/Abel/probitUM/src/rtn1.cpp",
                 "line": 32,
                 "column": 15,
                 "hidden": false
@@ -28,7 +28,7 @@
                 "kind": 6,
                 "parent_name": "",
                 "name": "UseAlg2(const double)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/rtn1.cpp",
+                "file": "E:/OneDrive/UW_Seattle/paper/Abel/probitUM/src/rtn1.cpp",
                 "line": 64,
                 "column": 15,
                 "hidden": false
@@ -38,7 +38,7 @@
                 "kind": 6,
                 "parent_name": "",
                 "name": "UseAlg3(const double, const double)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/rtn1.cpp",
+                "file": "E:/OneDrive/UW_Seattle/paper/Abel/probitUM/src/rtn1.cpp",
                 "line": 106,
                 "column": 15,
                 "hidden": false
@@ -48,322 +48,9 @@
                 "kind": 6,
                 "parent_name": "",
                 "name": "rtn1(const double, const double, const double, const double)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/rtn1.cpp",
+                "file": "E:/OneDrive/UW_Seattle/paper/Abel/probitUM/src/rtn1.cpp",
                 "line": 163,
                 "column": 8,
-                "hidden": false
-            }
-        ],
-        "hidden": false
-    },
-    {
-        "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/rtn1.h",
-        "file_last_write": 1709704165.0,
-        "definitions": [],
-        "hidden": false
-    },
-    {
-        "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/three_utility_probit_helper_functions.cpp",
-        "file_last_write": 1723446633.0,
-        "definitions": [
-            {
-                "usr": "c:@F@isVoteValid#d#",
-                "kind": 6,
-                "parent_name": "",
-                "name": "isVoteValid(double)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/three_utility_probit_helper_functions.cpp",
-                "line": 25,
-                "column": 6,
-                "hidden": false
-            },
-            {
-                "usr": "c:@F@create_ar_1_m#d#d#d#",
-                "kind": 6,
-                "parent_name": "",
-                "name": "create_ar_1_m(double, double, double)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/three_utility_probit_helper_functions.cpp",
-                "line": 28,
-                "column": 11,
-                "hidden": false
-            },
-            {
-                "usr": "c:@F@create_ar_1_m_chol#d#d#d#",
-                "kind": 6,
-                "parent_name": "",
-                "name": "create_ar_1_m_chol(double, double, double)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/three_utility_probit_helper_functions.cpp",
-                "line": 42,
-                "column": 11,
-                "hidden": false
-            },
-            {
-                "usr": "c:@F@create_ar_1_m_inverse#d#d#d#",
-                "kind": 6,
-                "parent_name": "",
-                "name": "create_ar_1_m_inverse(double, double, double)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/three_utility_probit_helper_functions.cpp",
-                "line": 58,
-                "column": 11,
-                "hidden": false
-            },
-            {
-                "usr": "c:@F@simulate_draw_from_ar_1_m_chol#d#d#d#d#",
-                "kind": 6,
-                "parent_name": "",
-                "name": "simulate_draw_from_ar_1_m_chol(double, double, double, double)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/three_utility_probit_helper_functions.cpp",
-                "line": 78,
-                "column": 11,
-                "hidden": false
-            },
-            {
-                "usr": "c:@F@sample_three_utility_probit_beta#$@N@arma@S@Row>#d#S0_#S0_#S0_#S0_#S0_#d#d#",
-                "kind": 6,
-                "parent_name": "",
-                "name": "sample_three_utility_probit_beta(arma::rowvec, arma::rowvec, arma::rowvec, arma::rowvec, arma::rowvec, arma::rowvec, double, double)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/three_utility_probit_helper_functions.cpp",
-                "line": 87,
-                "column": 8,
-                "hidden": false
-            },
-            {
-                "usr": "c:@F@sample_three_utility_probit_beta_gp#$@N@arma@S@Row>#d#S0_#S0_#S0_#S0_#S0_#$@N@arma@S@Col>#i#d#",
-                "kind": 6,
-                "parent_name": "",
-                "name": "sample_three_utility_probit_beta_gp(arma::rowvec, arma::rowvec, arma::rowvec, arma::rowvec, arma::rowvec, arma::rowvec, arma::uvec, double)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/three_utility_probit_helper_functions.cpp",
-                "line": 103,
-                "column": 11,
-                "hidden": false
-            },
-            {
-                "usr": "c:@F@logit#d#",
-                "kind": 6,
-                "parent_name": "",
-                "name": "logit(double)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/three_utility_probit_helper_functions.cpp",
-                "line": 125,
-                "column": 8,
-                "hidden": false
-            },
-            {
-                "usr": "c:@F@inv_logit#d#",
-                "kind": 6,
-                "parent_name": "",
-                "name": "inv_logit(double)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/three_utility_probit_helper_functions.cpp",
-                "line": 129,
-                "column": 8,
-                "hidden": false
-            },
-            {
-                "usr": "c:@F@sample_rho_pos_logit_gibbs#d#$@N@arma@S@Col>#d#$@N@arma@S@Col>#i#S1_#d#d#d#",
-                "kind": 6,
-                "parent_name": "",
-                "name": "sample_rho_pos_logit_gibbs(double, arma::vec, arma::uvec, arma::uvec, double, double, double)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/three_utility_probit_helper_functions.cpp",
-                "line": 133,
-                "column": 8,
-                "hidden": false
-            },
-            {
-                "usr": "c:@F@sample_three_utility_probit_matched_alpha#$@N@arma@S@Col>#d#S0_#S0_#S0_#S0_#$@N@arma@S@Mat>#d#S0_#S1_#",
-                "kind": 6,
-                "parent_name": "",
-                "name": "sample_three_utility_probit_matched_alpha(arma::vec, arma::vec, arma::vec, arma::vec, arma::vec, arma::mat, arma::vec, arma::mat)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/three_utility_probit_helper_functions.cpp",
-                "line": 162,
-                "column": 11,
-                "hidden": false
-            },
-            {
-                "usr": "c:@F@sample_three_utility_probit_matched_alpha_flip#$@N@arma@S@Col>#d#S0_#S0_#S0_#S0_#$@N@arma@S@Mat>#d#S0_#S1_#",
-                "kind": 6,
-                "parent_name": "",
-                "name": "sample_three_utility_probit_matched_alpha_flip(arma::vec, arma::vec, arma::vec, arma::vec, arma::vec, arma::mat, arma::vec, arma::mat)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/three_utility_probit_helper_functions.cpp",
-                "line": 212,
-                "column": 11,
-                "hidden": false
-            },
-            {
-                "usr": "c:@F@sample_three_utility_probit_matched_delta#$@N@arma@S@Col>#d#S0_#S0_#S0_#d#S0_#$@N@arma@S@Mat>#d#",
-                "kind": 6,
-                "parent_name": "",
-                "name": "sample_three_utility_probit_matched_delta(arma::vec, arma::vec, arma::vec, arma::vec, double, arma::vec, arma::mat)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/three_utility_probit_helper_functions.cpp",
-                "line": 261,
-                "column": 11,
-                "hidden": false
-            },
-            {
-                "usr": "c:@F@sample_three_utility_probit_matched_delta_flip#$@N@arma@S@Col>#d#S0_#S0_#S0_#d#S0_#$@N@arma@S@Mat>#d#",
-                "kind": 6,
-                "parent_name": "",
-                "name": "sample_three_utility_probit_matched_delta_flip(arma::vec, arma::vec, arma::vec, arma::vec, double, arma::vec, arma::mat)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/three_utility_probit_helper_functions.cpp",
-                "line": 279,
-                "column": 11,
-                "hidden": false
-            },
-            {
-                "usr": "c:@F@sample_y_star_m_na#d#d#",
-                "kind": 6,
-                "parent_name": "",
-                "name": "sample_y_star_m_na(double, double)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/three_utility_probit_helper_functions.cpp",
-                "line": 297,
-                "column": 11,
-                "hidden": false
-            },
-            {
-                "usr": "c:@F@sample_y_star_m_yea#$@N@arma@S@Col>#d#d#d#",
-                "kind": 6,
-                "parent_name": "",
-                "name": "sample_y_star_m_yea(arma::vec, double, double)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/three_utility_probit_helper_functions.cpp",
-                "line": 304,
-                "column": 11,
-                "hidden": false
-            },
-            {
-                "usr": "c:@F@sample_y_star_m_no#$@N@arma@S@Col>#d#d#d#",
-                "kind": 6,
-                "parent_name": "",
-                "name": "sample_y_star_m_no(arma::vec, double, double)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/three_utility_probit_helper_functions.cpp",
-                "line": 315,
-                "column": 11,
-                "hidden": false
-            },
-            {
-                "usr": "c:@F@sample_y_star_m#$@N@arma@S@Col>#d#d#d#d#d#d#d#",
-                "kind": 6,
-                "parent_name": "",
-                "name": "sample_y_star_m(arma::vec, double, double, double, double, double, double)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/three_utility_probit_helper_functions.cpp",
-                "line": 336,
-                "column": 11,
-                "hidden": false
-            },
-            {
-                "usr": "c:@F@bvnd#d#d#d#",
-                "kind": 6,
-                "parent_name": "",
-                "name": "bvnd(double, double, double)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/three_utility_probit_helper_functions.cpp",
-                "line": 355,
-                "column": 8,
-                "hidden": false
-            },
-            {
-                "usr": "c:@F@bvndvec#$@N@Rcpp@S@Vector>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#S0_#S0_#",
-                "kind": 6,
-                "parent_name": "",
-                "name": "bvndvec(Rcpp::NumericVector, Rcpp::NumericVector, Rcpp::NumericVector)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/three_utility_probit_helper_functions.cpp",
-                "line": 463,
-                "column": 15,
-                "hidden": false
-            },
-            {
-                "usr": "c:@F@sample_three_utility_probit_rcpp#$@N@arma@S@Mat>#d#S0_#S0_#S0_#S0_#I#I#I#I#I#d#d#$@N@arma@S@Col>#d#S0_#S1_#S0_#I#I#I#I#I#b#",
-                "kind": 6,
-                "parent_name": "",
-                "name": "sample_three_utility_probit_rcpp(arma::mat, arma::mat, arma::mat, arma::mat, arma::mat, int, int, int, int, int, double, double, arma::vec, arma::mat, arma::vec, arma::mat, int, int, int, int, int, bool)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/three_utility_probit_helper_functions.cpp",
-                "line": 565,
-                "column": 6,
-                "hidden": false
-            },
-            {
-                "usr": "c:@F@adjust_all_judge_ideology#$@N@arma@S@Col>#d#$@N@arma@S@Col>#i#S1_#S1_#I#I#I#I#S1_#S1_#S1_#S1_#",
-                "kind": 6,
-                "parent_name": "",
-                "name": "adjust_all_judge_ideology(arma::vec, arma::uvec, arma::uvec, arma::uvec, int, int, int, int, arma::uvec, arma::uvec, arma::uvec, arma::uvec)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/three_utility_probit_helper_functions.cpp",
-                "line": 812,
-                "column": 11,
-                "hidden": false
-            },
-            {
-                "usr": "c:@F@sample_three_utility_probit_gp#$@N@arma@S@Mat>#d#S0_#S0_#S0_#S0_#$@N@arma@S@Col>#i#S1_#S1_#$@N@arma@S@Mat>#i#S1_#I#I#I#I#I#$@N@arma@S@Col>#d#S0_#S3_#S0_#d#d#d#I#I#I#S1_#S1_#S1_#S1_#",
-                "kind": 6,
-                "parent_name": "",
-                "name": "sample_three_utility_probit_gp(arma::mat, arma::mat, arma::mat, arma::mat, arma::mat, arma::uvec, arma::uvec, arma::uvec, arma::umat, arma::uvec, int, int, int, int, int, arma::vec, arma::mat, arma::vec, arma::mat, double, double, double, int, int, int, arma::uvec, arma::uvec, arma::uvec, arma::uvec)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/three_utility_probit_helper_functions.cpp",
-                "line": 858,
-                "column": 6,
-                "hidden": false
-            },
-            {
-                "usr": "c:@F@phid#d#",
-                "kind": 6,
-                "parent_name": "",
-                "name": "phid(double)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/three_utility_probit_helper_functions.cpp",
-                "line": 986,
-                "column": 8,
-                "hidden": false
-            },
-            {
-                "usr": "c:@F@calc_probit_bggum_three_utility_post_prob_m#$@N@arma@S@Mat>#d#S0_#S0_#S0_#I#",
-                "kind": 6,
-                "parent_name": "",
-                "name": "calc_probit_bggum_three_utility_post_prob_m(arma::mat, arma::mat, arma::mat, arma::mat, int)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/three_utility_probit_helper_functions.cpp",
-                "line": 994,
-                "column": 11,
-                "hidden": false
-            },
-            {
-                "usr": "c:@F@calc_waic_probit_bggum_three_utility#$@N@arma@S@Mat>#d#S0_#S0_#S0_#I#",
-                "kind": 6,
-                "parent_name": "",
-                "name": "calc_waic_probit_bggum_three_utility(arma::mat, arma::mat, arma::mat, arma::mat, int)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/three_utility_probit_helper_functions.cpp",
-                "line": 1016,
-                "column": 11,
-                "hidden": false
-            },
-            {
-                "usr": "c:@F@calc_waic_probit_bggum_three_utility_block#$@N@arma@S@Mat>#d#S0_#S0_#S0_#$@N@arma@S@Col>#i#S0_#",
-                "kind": 6,
-                "parent_name": "",
-                "name": "calc_waic_probit_bggum_three_utility_block(arma::mat, arma::mat, arma::mat, arma::mat, arma::uvec, arma::mat)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/three_utility_probit_helper_functions.cpp",
-                "line": 1060,
-                "column": 11,
-                "hidden": false
-            },
-            {
-                "usr": "c:@F@calc_waic_probit_bggum_three_utility_block_rcpp#$@N@arma@S@Mat>#d#S0_#S0_#S0_#$@N@arma@S@Col>#i#S0_#",
-                "kind": 6,
-                "parent_name": "",
-                "name": "calc_waic_probit_bggum_three_utility_block_rcpp(arma::mat, arma::mat, arma::mat, arma::mat, arma::uvec, arma::mat)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/three_utility_probit_helper_functions.cpp",
-                "line": 1107,
-                "column": 11,
-                "hidden": false
-            },
-            {
-                "usr": "c:@F@calc_waic_probit_bggum_three_utility_block_vote_rcpp#$@N@arma@S@Mat>#d#S0_#S0_#S0_#S0_#",
-                "kind": 6,
-                "parent_name": "",
-                "name": "calc_waic_probit_bggum_three_utility_block_vote_rcpp(arma::mat, arma::mat, arma::mat, arma::mat, arma::mat)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/three_utility_probit_helper_functions.cpp",
-                "line": 1166,
-                "column": 11,
-                "hidden": false
-            },
-            {
-                "usr": "c:@F@calc_waic#$@N@arma@S@Mat>#d#S0_#S0_#S0_#S0_#S0_#",
-                "kind": 6,
-                "parent_name": "",
-                "name": "calc_waic(arma::mat, arma::mat, arma::mat, arma::mat, arma::mat, arma::mat)",
-                "file": "E:/OneDrive/UW_Seattle/paper/Abel/Voteprefer/src/three_utility_probit_helper_functions.cpp",
-                "line": 1252,
-                "column": 11,
                 "hidden": false
             }
         ],
