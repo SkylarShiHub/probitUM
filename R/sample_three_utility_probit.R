@@ -39,13 +39,13 @@
 #'           keep_iter = 1, leg_pos_init = NULL, alpha_pos_init = NULL,
 #'           delta_pos_init = NULL, y_star_m_1_init = NULL, y_star_m_2_init = NULL,
 #'           y_star_m_3_init = NULL, pos_ind = 82, neg_ind = 0, start_val = NULL,
-#'           sample_beta = T)
+#'           sample_beta = TRUE)
 #' @export
 sample_three_utility_probit <- function(
     vote_m, hyperparams, num_iter = 20000, start_iter = 10000, keep_iter = 1,
     leg_pos_init = NULL, alpha_pos_init = NULL, delta_pos_init = NULL,
     y_star_m_1_init = NULL, y_star_m_2_init = NULL, y_star_m_3_init = NULL,
-    pos_ind = 0, neg_ind = 0, start_val = NULL, sample_beta = T) {
+    pos_ind = 0, neg_ind = 0, start_val = NULL, sample_beta = TRUE) {
 
   total_iter = (num_iter - start_iter) %/% keep_iter
   init_info <- init_data_rcpp(
