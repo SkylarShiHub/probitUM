@@ -3,7 +3,7 @@
 #' @param rollnumber The roll number of the issue to be reviewed.
 #' @param post_samples A list of posterior samples of parameters obtained from MCMC.
 #' @importFrom Rcpp sourceCpp
-#' @importFrom ggplot2 ggplot aes geom_ribbon geom_line labs theme_minimal theme element_text
+#' @import ggplot2
 #' @useDynLib probitUM
 #' @return An item characteristic curve of the input issue
 #' @examples

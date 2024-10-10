@@ -37,9 +37,36 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// sample_three_utility_probit_rcpp
-List sample_three_utility_probit_rcpp(arma::mat vote_m, arma::mat all_param_draws, arma::mat y_star_m_1, arma::mat y_star_m_2, arma::mat y_star_m_3, int leg_start_ind, int alpha_v_1_start_ind, int alpha_v_2_start_ind, int delta_v_1_start_ind, int delta_v_2_start_ind, double leg_mean, double leg_sd, arma::vec alpha_mean_v, arma::mat alpha_cov_s, arma::vec delta_mean_v, arma::mat delta_cov_s, int num_iter, int start_iter, int keep_iter, int pos_ind, int neg_ind, bool sample_beta);
-RcppExport SEXP _probitUM_sample_three_utility_probit_rcpp(SEXP vote_mSEXP, SEXP all_param_drawsSEXP, SEXP y_star_m_1SEXP, SEXP y_star_m_2SEXP, SEXP y_star_m_3SEXP, SEXP leg_start_indSEXP, SEXP alpha_v_1_start_indSEXP, SEXP alpha_v_2_start_indSEXP, SEXP delta_v_1_start_indSEXP, SEXP delta_v_2_start_indSEXP, SEXP leg_meanSEXP, SEXP leg_sdSEXP, SEXP alpha_mean_vSEXP, SEXP alpha_cov_sSEXP, SEXP delta_mean_vSEXP, SEXP delta_cov_sSEXP, SEXP num_iterSEXP, SEXP start_iterSEXP, SEXP keep_iterSEXP, SEXP pos_indSEXP, SEXP neg_indSEXP, SEXP sample_betaSEXP) {
+// sample_t
+double sample_t(double df, double location, double scale);
+RcppExport SEXP _probitUM_sample_t(SEXP dfSEXP, SEXP locationSEXP, SEXP scaleSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< double >::type df(dfSEXP);
+    Rcpp::traits::input_parameter< double >::type location(locationSEXP);
+    Rcpp::traits::input_parameter< double >::type scale(scaleSEXP);
+    rcpp_result_gen = Rcpp::wrap(sample_t(df, location, scale));
+    return rcpp_result_gen;
+END_RCPP
+}
+// truncated_t_sample
+double truncated_t_sample(double df, double location, double scale, bool upper);
+RcppExport SEXP _probitUM_truncated_t_sample(SEXP dfSEXP, SEXP locationSEXP, SEXP scaleSEXP, SEXP upperSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< double >::type df(dfSEXP);
+    Rcpp::traits::input_parameter< double >::type location(locationSEXP);
+    Rcpp::traits::input_parameter< double >::type scale(scaleSEXP);
+    Rcpp::traits::input_parameter< bool >::type upper(upperSEXP);
+    rcpp_result_gen = Rcpp::wrap(truncated_t_sample(df, location, scale, upper));
+    return rcpp_result_gen;
+END_RCPP
+}
+// sample_probit_static_rcpp
+List sample_probit_static_rcpp(arma::mat vote_m, arma::mat all_param_draws, arma::mat y_star_m_1, arma::mat y_star_m_2, arma::mat y_star_m_3, int leg_start_ind, int alpha_v_1_start_ind, int alpha_v_2_start_ind, int delta_v_1_start_ind, int delta_v_2_start_ind, double leg_mean, double leg_sd, arma::vec alpha_mean_v, arma::mat alpha_cov_s, arma::vec delta_mean_v, arma::mat delta_cov_s, double nu, int num_iter, int start_iter, int keep_iter, double flip_rate, int pos_ind);
+RcppExport SEXP _probitUM_sample_probit_static_rcpp(SEXP vote_mSEXP, SEXP all_param_drawsSEXP, SEXP y_star_m_1SEXP, SEXP y_star_m_2SEXP, SEXP y_star_m_3SEXP, SEXP leg_start_indSEXP, SEXP alpha_v_1_start_indSEXP, SEXP alpha_v_2_start_indSEXP, SEXP delta_v_1_start_indSEXP, SEXP delta_v_2_start_indSEXP, SEXP leg_meanSEXP, SEXP leg_sdSEXP, SEXP alpha_mean_vSEXP, SEXP alpha_cov_sSEXP, SEXP delta_mean_vSEXP, SEXP delta_cov_sSEXP, SEXP nuSEXP, SEXP num_iterSEXP, SEXP start_iterSEXP, SEXP keep_iterSEXP, SEXP flip_rateSEXP, SEXP pos_indSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -59,19 +86,19 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< arma::mat >::type alpha_cov_s(alpha_cov_sSEXP);
     Rcpp::traits::input_parameter< arma::vec >::type delta_mean_v(delta_mean_vSEXP);
     Rcpp::traits::input_parameter< arma::mat >::type delta_cov_s(delta_cov_sSEXP);
+    Rcpp::traits::input_parameter< double >::type nu(nuSEXP);
     Rcpp::traits::input_parameter< int >::type num_iter(num_iterSEXP);
     Rcpp::traits::input_parameter< int >::type start_iter(start_iterSEXP);
     Rcpp::traits::input_parameter< int >::type keep_iter(keep_iterSEXP);
+    Rcpp::traits::input_parameter< double >::type flip_rate(flip_rateSEXP);
     Rcpp::traits::input_parameter< int >::type pos_ind(pos_indSEXP);
-    Rcpp::traits::input_parameter< int >::type neg_ind(neg_indSEXP);
-    Rcpp::traits::input_parameter< bool >::type sample_beta(sample_betaSEXP);
-    rcpp_result_gen = Rcpp::wrap(sample_three_utility_probit_rcpp(vote_m, all_param_draws, y_star_m_1, y_star_m_2, y_star_m_3, leg_start_ind, alpha_v_1_start_ind, alpha_v_2_start_ind, delta_v_1_start_ind, delta_v_2_start_ind, leg_mean, leg_sd, alpha_mean_v, alpha_cov_s, delta_mean_v, delta_cov_s, num_iter, start_iter, keep_iter, pos_ind, neg_ind, sample_beta));
+    rcpp_result_gen = Rcpp::wrap(sample_probit_static_rcpp(vote_m, all_param_draws, y_star_m_1, y_star_m_2, y_star_m_3, leg_start_ind, alpha_v_1_start_ind, alpha_v_2_start_ind, delta_v_1_start_ind, delta_v_2_start_ind, leg_mean, leg_sd, alpha_mean_v, alpha_cov_s, delta_mean_v, delta_cov_s, nu, num_iter, start_iter, keep_iter, flip_rate, pos_ind));
     return rcpp_result_gen;
 END_RCPP
 }
-// sample_three_utility_probit_gp
-List sample_three_utility_probit_gp(arma::mat vote_m, arma::mat all_param_draws, arma::mat y_star_m_1, arma::mat y_star_m_2, arma::mat y_star_m_3, arma::uvec judge_start_inds, arma::uvec judge_end_inds, arma::uvec case_years, arma::umat case_judge_years_ind_m, arma::uvec judge_year_v, int alpha_v_1_start_ind, int alpha_v_2_start_ind, int delta_v_1_start_ind, int delta_v_2_start_ind, int rho_ind, arma::vec alpha_mean_v, arma::mat alpha_cov_s, arma::vec delta_mean_v, arma::mat delta_cov_s, double rho_mean, double rho_sigma, double rho_sd, int num_iter, int start_iter, int keep_iter, arma::uvec pos_judge_ind, arma::uvec neg_judge_ind, arma::uvec pos_judge_year, arma::uvec neg_judge_year);
-RcppExport SEXP _probitUM_sample_three_utility_probit_gp(SEXP vote_mSEXP, SEXP all_param_drawsSEXP, SEXP y_star_m_1SEXP, SEXP y_star_m_2SEXP, SEXP y_star_m_3SEXP, SEXP judge_start_indsSEXP, SEXP judge_end_indsSEXP, SEXP case_yearsSEXP, SEXP case_judge_years_ind_mSEXP, SEXP judge_year_vSEXP, SEXP alpha_v_1_start_indSEXP, SEXP alpha_v_2_start_indSEXP, SEXP delta_v_1_start_indSEXP, SEXP delta_v_2_start_indSEXP, SEXP rho_indSEXP, SEXP alpha_mean_vSEXP, SEXP alpha_cov_sSEXP, SEXP delta_mean_vSEXP, SEXP delta_cov_sSEXP, SEXP rho_meanSEXP, SEXP rho_sigmaSEXP, SEXP rho_sdSEXP, SEXP num_iterSEXP, SEXP start_iterSEXP, SEXP keep_iterSEXP, SEXP pos_judge_indSEXP, SEXP neg_judge_indSEXP, SEXP pos_judge_yearSEXP, SEXP neg_judge_yearSEXP) {
+// sample_probit_dynamic_rcpp
+List sample_probit_dynamic_rcpp(arma::mat vote_m, arma::mat all_param_draws, arma::mat y_star_m_1, arma::mat y_star_m_2, arma::mat y_star_m_3, arma::uvec judge_start_inds, arma::uvec judge_end_inds, arma::uvec case_years, arma::umat case_judge_years_ind_m, arma::uvec judge_year_v, int alpha_v_1_start_ind, int alpha_v_2_start_ind, int delta_v_1_start_ind, int delta_v_2_start_ind, int rho_ind, arma::vec alpha_mean_v, arma::mat alpha_cov_s, arma::vec delta_mean_v, arma::mat delta_cov_s, double rho_mean, double rho_sigma, double rho_sd, double nu, int num_iter, int start_iter, int keep_iter, double flip_rate, arma::uvec pos_judge_ind, arma::uvec neg_judge_ind, arma::uvec pos_judge_year, arma::uvec neg_judge_year);
+RcppExport SEXP _probitUM_sample_probit_dynamic_rcpp(SEXP vote_mSEXP, SEXP all_param_drawsSEXP, SEXP y_star_m_1SEXP, SEXP y_star_m_2SEXP, SEXP y_star_m_3SEXP, SEXP judge_start_indsSEXP, SEXP judge_end_indsSEXP, SEXP case_yearsSEXP, SEXP case_judge_years_ind_mSEXP, SEXP judge_year_vSEXP, SEXP alpha_v_1_start_indSEXP, SEXP alpha_v_2_start_indSEXP, SEXP delta_v_1_start_indSEXP, SEXP delta_v_2_start_indSEXP, SEXP rho_indSEXP, SEXP alpha_mean_vSEXP, SEXP alpha_cov_sSEXP, SEXP delta_mean_vSEXP, SEXP delta_cov_sSEXP, SEXP rho_meanSEXP, SEXP rho_sigmaSEXP, SEXP rho_sdSEXP, SEXP nuSEXP, SEXP num_iterSEXP, SEXP start_iterSEXP, SEXP keep_iterSEXP, SEXP flip_rateSEXP, SEXP pos_judge_indSEXP, SEXP neg_judge_indSEXP, SEXP pos_judge_yearSEXP, SEXP neg_judge_yearSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -97,60 +124,16 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< double >::type rho_mean(rho_meanSEXP);
     Rcpp::traits::input_parameter< double >::type rho_sigma(rho_sigmaSEXP);
     Rcpp::traits::input_parameter< double >::type rho_sd(rho_sdSEXP);
+    Rcpp::traits::input_parameter< double >::type nu(nuSEXP);
     Rcpp::traits::input_parameter< int >::type num_iter(num_iterSEXP);
     Rcpp::traits::input_parameter< int >::type start_iter(start_iterSEXP);
     Rcpp::traits::input_parameter< int >::type keep_iter(keep_iterSEXP);
+    Rcpp::traits::input_parameter< double >::type flip_rate(flip_rateSEXP);
     Rcpp::traits::input_parameter< arma::uvec >::type pos_judge_ind(pos_judge_indSEXP);
     Rcpp::traits::input_parameter< arma::uvec >::type neg_judge_ind(neg_judge_indSEXP);
     Rcpp::traits::input_parameter< arma::uvec >::type pos_judge_year(pos_judge_yearSEXP);
     Rcpp::traits::input_parameter< arma::uvec >::type neg_judge_year(neg_judge_yearSEXP);
-    rcpp_result_gen = Rcpp::wrap(sample_three_utility_probit_gp(vote_m, all_param_draws, y_star_m_1, y_star_m_2, y_star_m_3, judge_start_inds, judge_end_inds, case_years, case_judge_years_ind_m, judge_year_v, alpha_v_1_start_ind, alpha_v_2_start_ind, delta_v_1_start_ind, delta_v_2_start_ind, rho_ind, alpha_mean_v, alpha_cov_s, delta_mean_v, delta_cov_s, rho_mean, rho_sigma, rho_sd, num_iter, start_iter, keep_iter, pos_judge_ind, neg_judge_ind, pos_judge_year, neg_judge_year));
-    return rcpp_result_gen;
-END_RCPP
-}
-// calc_probit_bggum_three_utility_post_prob_m
-arma::mat calc_probit_bggum_three_utility_post_prob_m(arma::mat leg_ideology, arma::mat alpha_m, arma::mat delta_m, arma::mat case_vote_m, int num_votes);
-RcppExport SEXP _probitUM_calc_probit_bggum_three_utility_post_prob_m(SEXP leg_ideologySEXP, SEXP alpha_mSEXP, SEXP delta_mSEXP, SEXP case_vote_mSEXP, SEXP num_votesSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< arma::mat >::type leg_ideology(leg_ideologySEXP);
-    Rcpp::traits::input_parameter< arma::mat >::type alpha_m(alpha_mSEXP);
-    Rcpp::traits::input_parameter< arma::mat >::type delta_m(delta_mSEXP);
-    Rcpp::traits::input_parameter< arma::mat >::type case_vote_m(case_vote_mSEXP);
-    Rcpp::traits::input_parameter< int >::type num_votes(num_votesSEXP);
-    rcpp_result_gen = Rcpp::wrap(calc_probit_bggum_three_utility_post_prob_m(leg_ideology, alpha_m, delta_m, case_vote_m, num_votes));
-    return rcpp_result_gen;
-END_RCPP
-}
-// calc_waic_probit_bggum_three_utility
-arma::vec calc_waic_probit_bggum_three_utility(arma::mat leg_ideology, arma::mat alpha_m, arma::mat delta_m, arma::mat case_vote_m, int num_votes);
-RcppExport SEXP _probitUM_calc_waic_probit_bggum_three_utility(SEXP leg_ideologySEXP, SEXP alpha_mSEXP, SEXP delta_mSEXP, SEXP case_vote_mSEXP, SEXP num_votesSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< arma::mat >::type leg_ideology(leg_ideologySEXP);
-    Rcpp::traits::input_parameter< arma::mat >::type alpha_m(alpha_mSEXP);
-    Rcpp::traits::input_parameter< arma::mat >::type delta_m(delta_mSEXP);
-    Rcpp::traits::input_parameter< arma::mat >::type case_vote_m(case_vote_mSEXP);
-    Rcpp::traits::input_parameter< int >::type num_votes(num_votesSEXP);
-    rcpp_result_gen = Rcpp::wrap(calc_waic_probit_bggum_three_utility(leg_ideology, alpha_m, delta_m, case_vote_m, num_votes));
-    return rcpp_result_gen;
-END_RCPP
-}
-// calc_waic_probit_bggum_three_utility_block
-arma::vec calc_waic_probit_bggum_three_utility_block(arma::mat leg_ideology, arma::mat alpha_m, arma::mat delta_m, arma::mat case_vote_m, arma::uvec case_year, arma::mat block_m);
-RcppExport SEXP _probitUM_calc_waic_probit_bggum_three_utility_block(SEXP leg_ideologySEXP, SEXP alpha_mSEXP, SEXP delta_mSEXP, SEXP case_vote_mSEXP, SEXP case_yearSEXP, SEXP block_mSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< arma::mat >::type leg_ideology(leg_ideologySEXP);
-    Rcpp::traits::input_parameter< arma::mat >::type alpha_m(alpha_mSEXP);
-    Rcpp::traits::input_parameter< arma::mat >::type delta_m(delta_mSEXP);
-    Rcpp::traits::input_parameter< arma::mat >::type case_vote_m(case_vote_mSEXP);
-    Rcpp::traits::input_parameter< arma::uvec >::type case_year(case_yearSEXP);
-    Rcpp::traits::input_parameter< arma::mat >::type block_m(block_mSEXP);
-    rcpp_result_gen = Rcpp::wrap(calc_waic_probit_bggum_three_utility_block(leg_ideology, alpha_m, delta_m, case_vote_m, case_year, block_m));
+    rcpp_result_gen = Rcpp::wrap(sample_probit_dynamic_rcpp(vote_m, all_param_draws, y_star_m_1, y_star_m_2, y_star_m_3, judge_start_inds, judge_end_inds, case_years, case_judge_years_ind_m, judge_year_v, alpha_v_1_start_ind, alpha_v_2_start_ind, delta_v_1_start_ind, delta_v_2_start_ind, rho_ind, alpha_mean_v, alpha_cov_s, delta_mean_v, delta_cov_s, rho_mean, rho_sigma, rho_sd, nu, num_iter, start_iter, keep_iter, flip_rate, pos_judge_ind, neg_judge_ind, pos_judge_year, neg_judge_year));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -170,49 +153,15 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// calc_waic_probit_bggum_three_utility_block_vote_rcpp
-arma::vec calc_waic_probit_bggum_three_utility_block_vote_rcpp(arma::mat leg_ideology, arma::mat alpha_m, arma::mat delta_m, arma::mat case_vote_m, arma::mat block_m);
-RcppExport SEXP _probitUM_calc_waic_probit_bggum_three_utility_block_vote_rcpp(SEXP leg_ideologySEXP, SEXP alpha_mSEXP, SEXP delta_mSEXP, SEXP case_vote_mSEXP, SEXP block_mSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< arma::mat >::type leg_ideology(leg_ideologySEXP);
-    Rcpp::traits::input_parameter< arma::mat >::type alpha_m(alpha_mSEXP);
-    Rcpp::traits::input_parameter< arma::mat >::type delta_m(delta_mSEXP);
-    Rcpp::traits::input_parameter< arma::mat >::type case_vote_m(case_vote_mSEXP);
-    Rcpp::traits::input_parameter< arma::mat >::type block_m(block_mSEXP);
-    rcpp_result_gen = Rcpp::wrap(calc_waic_probit_bggum_three_utility_block_vote_rcpp(leg_ideology, alpha_m, delta_m, case_vote_m, block_m));
-    return rcpp_result_gen;
-END_RCPP
-}
-// calc_waic
-arma::vec calc_waic(arma::mat leg_ideology, arma::mat alpha1_m, arma::mat alpha2_m, arma::mat delta1_m, arma::mat delta2_m, arma::mat case_vote_m);
-RcppExport SEXP _probitUM_calc_waic(SEXP leg_ideologySEXP, SEXP alpha1_mSEXP, SEXP alpha2_mSEXP, SEXP delta1_mSEXP, SEXP delta2_mSEXP, SEXP case_vote_mSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< arma::mat >::type leg_ideology(leg_ideologySEXP);
-    Rcpp::traits::input_parameter< arma::mat >::type alpha1_m(alpha1_mSEXP);
-    Rcpp::traits::input_parameter< arma::mat >::type alpha2_m(alpha2_mSEXP);
-    Rcpp::traits::input_parameter< arma::mat >::type delta1_m(delta1_mSEXP);
-    Rcpp::traits::input_parameter< arma::mat >::type delta2_m(delta2_mSEXP);
-    Rcpp::traits::input_parameter< arma::mat >::type case_vote_m(case_vote_mSEXP);
-    rcpp_result_gen = Rcpp::wrap(calc_waic(leg_ideology, alpha1_m, alpha2_m, delta1_m, delta2_m, case_vote_m));
-    return rcpp_result_gen;
-END_RCPP
-}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_probitUM_bvnd", (DL_FUNC) &_probitUM_bvnd, 3},
     {"_probitUM_bvndvec", (DL_FUNC) &_probitUM_bvndvec, 3},
-    {"_probitUM_sample_three_utility_probit_rcpp", (DL_FUNC) &_probitUM_sample_three_utility_probit_rcpp, 22},
-    {"_probitUM_sample_three_utility_probit_gp", (DL_FUNC) &_probitUM_sample_three_utility_probit_gp, 29},
-    {"_probitUM_calc_probit_bggum_three_utility_post_prob_m", (DL_FUNC) &_probitUM_calc_probit_bggum_three_utility_post_prob_m, 5},
-    {"_probitUM_calc_waic_probit_bggum_three_utility", (DL_FUNC) &_probitUM_calc_waic_probit_bggum_three_utility, 5},
-    {"_probitUM_calc_waic_probit_bggum_three_utility_block", (DL_FUNC) &_probitUM_calc_waic_probit_bggum_three_utility_block, 6},
+    {"_probitUM_sample_t", (DL_FUNC) &_probitUM_sample_t, 3},
+    {"_probitUM_truncated_t_sample", (DL_FUNC) &_probitUM_truncated_t_sample, 4},
+    {"_probitUM_sample_probit_static_rcpp", (DL_FUNC) &_probitUM_sample_probit_static_rcpp, 22},
+    {"_probitUM_sample_probit_dynamic_rcpp", (DL_FUNC) &_probitUM_sample_probit_dynamic_rcpp, 31},
     {"_probitUM_calc_waic_probit_bggum_three_utility_block_rcpp", (DL_FUNC) &_probitUM_calc_waic_probit_bggum_three_utility_block_rcpp, 6},
-    {"_probitUM_calc_waic_probit_bggum_three_utility_block_vote_rcpp", (DL_FUNC) &_probitUM_calc_waic_probit_bggum_three_utility_block_vote_rcpp, 5},
-    {"_probitUM_calc_waic", (DL_FUNC) &_probitUM_calc_waic, 6},
     {NULL, NULL, 0}
 };
 

@@ -28,6 +28,7 @@ This function is used to get samples of all the parameters from their posterior 
 }
 \examples{
 hyperparams = list(beta_mean = 0, beta_var = 1, alpha_mean = c(0, 0),
-                   alpha_var = 25, delta_mean = c(-2, 10), delta_var = 10)
+                   alpha_scale = 5, delta_mean = c(-2, 10),
+                   delta_scale = sqrt(10), nu = 10)
 tune_results = tune_hyper(hyperparams, n_member = 100, n_issue = 100)
 }

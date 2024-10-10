@@ -9,35 +9,23 @@ bvndvec <- function(DH, DK, R) {
     .Call('_probitUM_bvndvec', PACKAGE = 'probitUM', DH, DK, R)
 }
 
-sample_three_utility_probit_rcpp <- function(vote_m, all_param_draws, y_star_m_1, y_star_m_2, y_star_m_3, leg_start_ind, alpha_v_1_start_ind, alpha_v_2_start_ind, delta_v_1_start_ind, delta_v_2_start_ind, leg_mean, leg_sd, alpha_mean_v, alpha_cov_s, delta_mean_v, delta_cov_s, num_iter, start_iter, keep_iter, pos_ind, neg_ind, sample_beta) {
-    .Call('_probitUM_sample_three_utility_probit_rcpp', PACKAGE = 'probitUM', vote_m, all_param_draws, y_star_m_1, y_star_m_2, y_star_m_3, leg_start_ind, alpha_v_1_start_ind, alpha_v_2_start_ind, delta_v_1_start_ind, delta_v_2_start_ind, leg_mean, leg_sd, alpha_mean_v, alpha_cov_s, delta_mean_v, delta_cov_s, num_iter, start_iter, keep_iter, pos_ind, neg_ind, sample_beta)
+sample_t <- function(df, location, scale) {
+    .Call('_probitUM_sample_t', PACKAGE = 'probitUM', df, location, scale)
 }
 
-sample_three_utility_probit_gp <- function(vote_m, all_param_draws, y_star_m_1, y_star_m_2, y_star_m_3, judge_start_inds, judge_end_inds, case_years, case_judge_years_ind_m, judge_year_v, alpha_v_1_start_ind, alpha_v_2_start_ind, delta_v_1_start_ind, delta_v_2_start_ind, rho_ind, alpha_mean_v, alpha_cov_s, delta_mean_v, delta_cov_s, rho_mean, rho_sigma, rho_sd, num_iter, start_iter, keep_iter, pos_judge_ind, neg_judge_ind, pos_judge_year, neg_judge_year) {
-    .Call('_probitUM_sample_three_utility_probit_gp', PACKAGE = 'probitUM', vote_m, all_param_draws, y_star_m_1, y_star_m_2, y_star_m_3, judge_start_inds, judge_end_inds, case_years, case_judge_years_ind_m, judge_year_v, alpha_v_1_start_ind, alpha_v_2_start_ind, delta_v_1_start_ind, delta_v_2_start_ind, rho_ind, alpha_mean_v, alpha_cov_s, delta_mean_v, delta_cov_s, rho_mean, rho_sigma, rho_sd, num_iter, start_iter, keep_iter, pos_judge_ind, neg_judge_ind, pos_judge_year, neg_judge_year)
+truncated_t_sample <- function(df, location, scale, upper) {
+    .Call('_probitUM_truncated_t_sample', PACKAGE = 'probitUM', df, location, scale, upper)
 }
 
-calc_probit_bggum_three_utility_post_prob_m <- function(leg_ideology, alpha_m, delta_m, case_vote_m, num_votes) {
-    .Call('_probitUM_calc_probit_bggum_three_utility_post_prob_m', PACKAGE = 'probitUM', leg_ideology, alpha_m, delta_m, case_vote_m, num_votes)
+sample_probit_static_rcpp <- function(vote_m, all_param_draws, y_star_m_1, y_star_m_2, y_star_m_3, leg_start_ind, alpha_v_1_start_ind, alpha_v_2_start_ind, delta_v_1_start_ind, delta_v_2_start_ind, leg_mean, leg_sd, alpha_mean_v, alpha_cov_s, delta_mean_v, delta_cov_s, nu, num_iter, start_iter, keep_iter, flip_rate, pos_ind) {
+    .Call('_probitUM_sample_probit_static_rcpp', PACKAGE = 'probitUM', vote_m, all_param_draws, y_star_m_1, y_star_m_2, y_star_m_3, leg_start_ind, alpha_v_1_start_ind, alpha_v_2_start_ind, delta_v_1_start_ind, delta_v_2_start_ind, leg_mean, leg_sd, alpha_mean_v, alpha_cov_s, delta_mean_v, delta_cov_s, nu, num_iter, start_iter, keep_iter, flip_rate, pos_ind)
 }
 
-calc_waic_probit_bggum_three_utility <- function(leg_ideology, alpha_m, delta_m, case_vote_m, num_votes) {
-    .Call('_probitUM_calc_waic_probit_bggum_three_utility', PACKAGE = 'probitUM', leg_ideology, alpha_m, delta_m, case_vote_m, num_votes)
-}
-
-calc_waic_probit_bggum_three_utility_block <- function(leg_ideology, alpha_m, delta_m, case_vote_m, case_year, block_m) {
-    .Call('_probitUM_calc_waic_probit_bggum_three_utility_block', PACKAGE = 'probitUM', leg_ideology, alpha_m, delta_m, case_vote_m, case_year, block_m)
+sample_probit_dynamic_rcpp <- function(vote_m, all_param_draws, y_star_m_1, y_star_m_2, y_star_m_3, judge_start_inds, judge_end_inds, case_years, case_judge_years_ind_m, judge_year_v, alpha_v_1_start_ind, alpha_v_2_start_ind, delta_v_1_start_ind, delta_v_2_start_ind, rho_ind, alpha_mean_v, alpha_cov_s, delta_mean_v, delta_cov_s, rho_mean, rho_sigma, rho_sd, nu, num_iter, start_iter, keep_iter, flip_rate, pos_judge_ind, neg_judge_ind, pos_judge_year, neg_judge_year) {
+    .Call('_probitUM_sample_probit_dynamic_rcpp', PACKAGE = 'probitUM', vote_m, all_param_draws, y_star_m_1, y_star_m_2, y_star_m_3, judge_start_inds, judge_end_inds, case_years, case_judge_years_ind_m, judge_year_v, alpha_v_1_start_ind, alpha_v_2_start_ind, delta_v_1_start_ind, delta_v_2_start_ind, rho_ind, alpha_mean_v, alpha_cov_s, delta_mean_v, delta_cov_s, rho_mean, rho_sigma, rho_sd, nu, num_iter, start_iter, keep_iter, flip_rate, pos_judge_ind, neg_judge_ind, pos_judge_year, neg_judge_year)
 }
 
 calc_waic_probit_bggum_three_utility_block_rcpp <- function(leg_ideology, alpha_m, delta_m, case_vote_m, case_year, block_m) {
     .Call('_probitUM_calc_waic_probit_bggum_three_utility_block_rcpp', PACKAGE = 'probitUM', leg_ideology, alpha_m, delta_m, case_vote_m, case_year, block_m)
-}
-
-calc_waic_probit_bggum_three_utility_block_vote_rcpp <- function(leg_ideology, alpha_m, delta_m, case_vote_m, block_m) {
-    .Call('_probitUM_calc_waic_probit_bggum_three_utility_block_vote_rcpp', PACKAGE = 'probitUM', leg_ideology, alpha_m, delta_m, case_vote_m, block_m)
-}
-
-calc_waic <- function(leg_ideology, alpha1_m, alpha2_m, delta1_m, delta2_m, case_vote_m) {
-    .Call('_probitUM_calc_waic', PACKAGE = 'probitUM', leg_ideology, alpha1_m, alpha2_m, delta1_m, delta2_m, case_vote_m)
 }
 

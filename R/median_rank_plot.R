@@ -2,7 +2,7 @@
 #' @description Generates the median rank plot for all members based on posterior samples
 #' @param beta A matrix of posterior samples of beta obtained from MCMC
 #' @param col_blue A character string indicating whether the "D" party should be colored blue or "R".
-#' @importFrom ggplot2 ggplot geom_point scale_color_manual scale_shape_manual labs theme_minimal theme element_text element_blank aes
+#' @import ggplot2
 #' @importFrom ggrepel geom_text_repel
 #' @importFrom dplyr arrange desc top_n slice dense_rank n
 #' @importFrom magrittr %>%
@@ -20,7 +20,7 @@ median_rank_plot = function(beta, col_blue = "D"){
   # find the median rank of each member
   rank_median <- apply(rank_matrix, 2, median)
 
-  all_members = gsub("_beta", "", colnames(post_samples$beta))
+  all_members = gsub("_beta", "", colnames(beta))
   party_vector <- ifelse(grepl("\\(D", all_members), "D",
                          ifelse(grepl("\\(R", all_members), "R",
                                 ifelse(grepl("\\(I", all_members), "I", NA)))
@@ -46,7 +46,7 @@ median_rank_plot = function(beta, col_blue = "D"){
   median_index <- which(sorted_rank_data$rank == median(sorted_rank_data$rank))
   median_label <- sorted_rank_data[median_index, ]
   rank_plot = ggplot(sorted_rank_data, aes(x = median, y = rank, color = party, shape = party)) +
-    geom_point(size = 2.2, alpha = 0.6) +
+    geom_point(size = 2, alpha = 0.6) +
     geom_text_repel(data = top_labels, aes(label = names),
                     size = 3, col = "black") +
     geom_text_repel(data = bottom_labels, aes(label = names),

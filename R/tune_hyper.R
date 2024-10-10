@@ -17,23 +17,26 @@
 #' - `histogram`: A histogram of the density of probabilities.
 #' @examples
 #' hyperparams = list(beta_mean = 0, beta_var = 1, alpha_mean = c(0, 0),
-#'                    alpha_var = 25, delta_mean = c(-2, 10), delta_var = 10)
+#'                    alpha_scale = 5, delta_mean = c(-2, 10),
+#'                    delta_scale = sqrt(10), nu = 10)
 #' tune_results = tune_hyper(hyperparams, n_member = 100, n_issue = 100)
 #' @export
 tune_hyper <- function(hyperparams = hyperparams, n_member, n_issue) {
   samples <- matrix(0, nrow = n_issue, ncol = 4)
   for (i in 1:n_issue) {
     if (runif(1) < 0.5) {
-      alpha_j1 <- rtruncnorm(1, a = 0, b = Inf, mean = hyperparams$alpha_mean[1], sd = sqrt(hyperparams$alpha_var))
-      alpha_j2 <- rtruncnorm(1, a = -Inf, b = 0, mean = hyperparams$alpha_mean[2], sd = sqrt(hyperparams$alpha_var))
-      delta_j <- mvrnorm(1, hyperparams$delta_mean, matrix(c(hyperparams$delta_var, 0, 0, hyperparams$delta_var), nrow = 2))
+      alpha_j1 <- truncated_t_sample(hyperparams$nu, hyperparams$alpha_mean[1], hyperparams$alpha_scale, TRUE)
+      alpha_j2 <- truncated_t_sample(hyperparams$nu, hyperparams$alpha_mean[2], hyperparams$alpha_scale, FALSE)
+      delta_j1 <- sample_t(hyperparams$nu, hyperparams$delta_mean[1], hyperparams$delta_scale)
+      delta_j2 <- sample_t(hyperparams$nu, hyperparams$delta_mean[2], hyperparams$delta_scale)
     } else {
-      alpha_j1 <- rtruncnorm(1, a = -Inf, b = 0, mean = hyperparams$alpha_mean[1], sd = sqrt(hyperparams$alpha_var))
-      alpha_j2 <- rtruncnorm(1, a = 0, b = Inf, mean = hyperparams$alpha_mean[2], sd = sqrt(hyperparams$alpha_var))
-      delta_j <- mvrnorm(1, -hyperparams$delta_mean, matrix(c(hyperparams$delta_var, 0, 0, hyperparams$delta_var), nrow = 2))
+      alpha_j1 <- truncated_t_sample(hyperparams$nu, hyperparams$alpha_mean[1], hyperparams$alpha_scale, FALSE)
+      alpha_j2 <- truncated_t_sample(hyperparams$nu, hyperparams$alpha_mean[2], hyperparams$alpha_scale, TRUE)
+      delta_j1 <- sample_t(hyperparams$nu, -hyperparams$delta_mean[1], hyperparams$delta_scale)
+      delta_j2 <- sample_t(hyperparams$nu, -hyperparams$delta_mean[2], hyperparams$delta_scale)
     }
 
-    samples[i, ] <- c(alpha_j1, alpha_j2, delta_j)
+    samples[i, ] <- c(alpha_j1, alpha_j2, delta_j1, delta_j2)
   }
   beta = rnorm(n_member,hyperparams$beta_mean, sqrt(hyperparams$beta_var))
   samples = list(beta = beta, alpha1 = samples[,1], alpha2 = samples[,2],
@@ -45,11 +48,11 @@ tune_hyper <- function(hyperparams = hyperparams, n_member, n_issue) {
   histogram <- hist(probability, freq = FALSE,
                     xlab = expression(theta[list(i,j)]),
                     ylim = c(0,10),
-                    main = bquote("Histogram of " * .(n_member*n_issue) *
+                    main = bquote(.(n_member*n_issue) *
                                     " draws with " ~
                                     mu == .(mu_string) * "," ~
-                                    omega^2 == .(hyperparams$alpha_var) * "," ~
-                                    kappa^2 == .(hyperparams$delta_var)),
+                                    omega == .(hyperparams$alpha_scale) * "," ~
+                                    kappa == .(hyperparams$delta_scale)),
                     border = "black", col = NA, lwd = 1,cex.lab = 1.2,
                     panel.first = grid())
   return(list(samples = samples, probability = probability, histogram = histogram))
