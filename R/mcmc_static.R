@@ -34,28 +34,12 @@
 #' - `delta2`: A matrix of parameter draws of delta2.
 #' @examples
 #' hyperparams = list(beta_mean = 0, beta_var = 1, alpha_mean = c(0, 0),
-<<<<<<< HEAD:R/mcmc_static.R
 #'                    alpha_scale = 5, delta_mean = c(-2, 10), delta_scale = sqrt(10), nu = 10)
 #' iter_config = list(num_iter = 100, start_iter = 0, keep_iter = 1, flip_rate = 0.1)
 #'
 #' post_samples = sample_probit_static(house_votes_m, hyperparams, iter_config, pos_ind = 82)
 #' @export
 sample_probit_static <- function(vote_m, hyperparams, iter_config, pos_ind = 0) {
-=======
-#'                    alpha_var = 25, delta_mean = c(-2, 10), delta_var = 10)
-#' post_samples = sample_three_utility_probit(house_votes_m, hyperparams,
-#'           num_iter = 400, start_iter = 200,
-#'           keep_iter = 1, leg_pos_init = NULL, alpha_pos_init = NULL,
-#'           delta_pos_init = NULL, y_star_m_1_init = NULL, y_star_m_2_init = NULL,
-#'           y_star_m_3_init = NULL, pos_ind = 82, neg_ind = 0, start_val = NULL,
-#'           sample_beta = TRUE)
-#' @export
-sample_three_utility_probit <- function(
-    vote_m, hyperparams, num_iter = 20000, start_iter = 10000, keep_iter = 1,
-    leg_pos_init = NULL, alpha_pos_init = NULL, delta_pos_init = NULL,
-    y_star_m_1_init = NULL, y_star_m_2_init = NULL, y_star_m_3_init = NULL,
-    pos_ind = 0, neg_ind = 0, start_val = NULL, sample_beta = TRUE) {
->>>>>>> 7ea2afa08b913352504b7322a51ffe727502be67:R/sample_three_utility_probit.R
 
   total_iter = (iter_config$num_iter - iter_config$start_iter) %/% iter_config$keep_iter
   init_info <- init_data_rcpp(
